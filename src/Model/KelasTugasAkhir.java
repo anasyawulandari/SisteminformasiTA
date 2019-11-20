@@ -12,15 +12,12 @@ import java.util.List;
 public class KelasTugasAkhir {
     private List<Dosen> timDosen;
     private List<Mahasiswa> daftarMhsTA;
-    Mahasiswa[] Mhs;
-    Dosen[] dosen;
-
     
     public void addMahasiswa(Mahasiswa m){
-        
+        this.daftarMhsTA.add(m);
     }
     public void addDosen(Dosen d){
-        
+        this.timDosen.add(d);
     }
 }
 

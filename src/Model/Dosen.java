@@ -9,7 +9,7 @@ package Model;
  *
  * @author ASUS
  */
-public abstract class Dosen extends Orang{
+public class Dosen extends Orang{
     private long nidn;
     private String kodedosen;
     KelasTugasAkhir kelasTA;

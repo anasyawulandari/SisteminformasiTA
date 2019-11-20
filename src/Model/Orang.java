@@ -9,7 +9,7 @@ package Model;
  *
  * @author ASUS
  */
-public class Orang {
+public  abstract class Orang {
     private String nama;
 
     public Orang(String nama) {

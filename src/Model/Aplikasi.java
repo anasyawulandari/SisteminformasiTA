@@ -5,20 +5,15 @@
  */
 package Model;
 
-import java.util.List;
+import java.util.*;
 
 /**
  *
  * @author ASUS
  */
-public class TugasAkhir {
-        private List<Dosen> timDosen;
-//        Dosen[] dosen;
-
-    public TugasAkhir(List<Dosen> timDosen) {
-        this.timDosen = timDosen;
-//        this.dosen = dosen;
+public class Aplikasi {
+    private List<Orang> daftar= new ArrayList<>();
+    public void addmahasiswa(Mahasiswa a){
+        this.daftar.add(a);
     }
-        
-    
 }
