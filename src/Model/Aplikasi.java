@@ -9,7 +9,7 @@ import java.util.*;
 
 /**
  *
- * @author ASUS
+ * @author Anasya test
  */
 public class Aplikasi {
     private List<Orang> daftar= new ArrayList<>();
