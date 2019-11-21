@@ -22,6 +22,32 @@ public class Dosen extends Orang{
         this.kelasTA = kelasTA;
         this.topik = topik;
     }
+
+    public long getNidn() {
+        return nidn;
+    }
+
+    public void setNidn(long nidn) {
+        this.nidn = nidn;
+    }
+
+    public String getKodedosen() {
+        return kodedosen;
+    }
+
+    public void setKodedosen(String kodedosen) {
+        this.kodedosen = kodedosen;
+    }
+
+    public String getTopik() {
+        return topik;
+    }
+
+    public void setTopik(String topik) {
+        this.topik = topik;
+    }
+    
+    
    
     public void createKelompokTA(String topik){
         
