@@ -5,14 +5,19 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+
 /**
  *
- * @author user
+ * @author ASUS
  */
-public class Welcome_view extends javax.swing.JPanel {
+public class Welcome_view extends javax.swing.JFrame {
 
     /**
-     * Creates new form Welcome
+     * Creates new form NewJFrame
      */
     public Welcome_view() {
         initComponents();
@@ -32,6 +37,8 @@ public class Welcome_view extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnMulai = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         cbDaftar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mahasiswa", "Dosen", "Admin" }));
@@ -46,6 +53,11 @@ public class Welcome_view extends javax.swing.JPanel {
         jLabel1.setToolTipText("");
 
         btnMulai.setText("Mulai");
+        btnMulai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMulaiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,28 +93,54 @@ public class Welcome_view extends javax.swing.JPanel {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(154, 154, 154)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDaftarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbDaftarActionPerformed
 
+    private void btnMulaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulaiActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_btnMulaiActionPerformed
+
+   
+    public JButton getBtnMulai() {
+        return btnMulai;
+    }
+
+    
+
+    public JComboBox<String> getCbDaftar() {
+        return cbDaftar;
+    }
+
+    public void setCbDaftar(JComboBox<String> cbDaftar) {
+        this.cbDaftar = cbDaftar;
+    }
+    
+    public void addActionListener(ActionListener x){
+        btnMulai.addActionListener(x);
+        cbDaftar.addActionListener(x);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMulai;

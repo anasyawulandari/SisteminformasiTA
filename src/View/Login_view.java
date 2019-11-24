@@ -5,6 +5,11 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ASUS
@@ -27,6 +32,7 @@ public class Login_view extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
         tfUname = new javax.swing.JTextField();
         tfPass = new javax.swing.JTextField();
@@ -34,6 +40,17 @@ public class Login_view extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -162,8 +179,29 @@ public class Login_view extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnLogin() {
+        return btnLogin;
+    }
+
+    public String getTfPass() {
+        return tfPass.getText();
+    }
+
+    public String getTfUname() {
+        return tfUname.getText();
+    }
+
+    public void setTfUname(JTextField tfUname) {
+        this.tfUname = tfUname;
+    }
+        public void setLoginEvent(ActionListener act){
+        btnLogin.addActionListener(act);
+    }
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -171,4 +209,9 @@ public class Login_view extends javax.swing.JFrame {
     private javax.swing.JTextField tfPass;
     private javax.swing.JTextField tfUname;
     // End of variables declaration//GEN-END:variables
+
+    public void showMessage(String message, String title, int type){
+        JOptionPane.showMessageDialog(null, message, title, type);
+    }
+
 }

@@ -44,8 +44,8 @@ public class Mahasiswa extends Orang{
     public void setJk(char jk) {
         this.jk = jk;
     }
-    public void createTA(TugasAkhir tugasAkhir){
-        
+    public void createTA(String kk, String judulTA){
+        this.tugasAkhir = new TugasAkhir(kk,judulTA);
     }
-    
+ 
 }
