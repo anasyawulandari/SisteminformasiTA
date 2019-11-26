@@ -44,8 +44,6 @@ public class addDosen_view extends javax.swing.JFrame {
         btnResetDataDosen = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbDataDosen = new javax.swing.JTable();
-        tfSearchDataDosen = new javax.swing.JTextField();
-        btnSearchDataDosen = new javax.swing.JButton();
         cbKkDataDosen = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,6 +55,12 @@ public class addDosen_view extends javax.swing.JFrame {
         jLabel2.setText("Nama");
 
         jLabel3.setText("NIDN/NIP");
+
+        tfNamaDataDosen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamaDataDosenActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("KK");
 
@@ -104,14 +108,6 @@ public class addDosen_view extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbDataDosen);
 
-        tfSearchDataDosen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfSearchDataDosenActionPerformed(evt);
-            }
-        });
-
-        btnSearchDataDosen.setText("Search");
-
         cbKkDataDosen.setEditable(true);
         cbKkDataDosen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SIDE", "ICM", "TELE", "MCE" }));
 
@@ -133,14 +129,14 @@ public class addDosen_view extends javax.swing.JFrame {
                                     .addComponent(jLabel5))
                                 .addGap(44, 44, 44)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfNamaDataDosen)
                                     .addComponent(tfNidnDataDosen)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(rbLakiDataDosen)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(rbPerempuanDataDosen)
                                         .addGap(0, 120, Short.MAX_VALUE))
-                                    .addComponent(cbKkDataDosen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(cbKkDataDosen, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tfNamaDataDosen)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnAddDataDosen)
                                 .addGap(18, 18, 18)
@@ -150,10 +146,7 @@ public class addDosen_view extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnResetDataDosen)
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(43, 43, 43)
-                        .addComponent(tfSearchDataDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSearchDataDosen)))
+                        .addGap(269, 269, 269)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,9 +179,7 @@ public class addDosen_view extends javax.swing.JFrame {
                     .addComponent(btnAddDataDosen)
                     .addComponent(btnEditDataDosen)
                     .addComponent(btnRemoveDataDosen)
-                    .addComponent(btnResetDataDosen)
-                    .addComponent(tfSearchDataDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearchDataDosen))
+                    .addComponent(btnResetDataDosen))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 22, Short.MAX_VALUE))
@@ -223,9 +214,9 @@ public class addDosen_view extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnResetDataDosenActionPerformed
 
-    private void tfSearchDataDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSearchDataDosenActionPerformed
+    private void tfNamaDataDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaDataDosenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfSearchDataDosenActionPerformed
+    }//GEN-LAST:event_tfNamaDataDosenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,7 +262,6 @@ public class addDosen_view extends javax.swing.JFrame {
     private javax.swing.JButton btnEditDataDosen;
     private javax.swing.JButton btnRemoveDataDosen;
     private javax.swing.JButton btnResetDataDosen;
-    private javax.swing.JButton btnSearchDataDosen;
     private javax.swing.JComboBox<String> cbKkDataDosen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -285,6 +275,5 @@ public class addDosen_view extends javax.swing.JFrame {
     private javax.swing.JTable tbDataDosen;
     private javax.swing.JTextField tfNamaDataDosen;
     private javax.swing.JTextField tfNidnDataDosen;
-    private javax.swing.JTextField tfSearchDataDosen;
     // End of variables declaration//GEN-END:variables
 }

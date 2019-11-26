@@ -5,6 +5,11 @@
  */
 package View;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author user
@@ -27,6 +32,7 @@ public class addMhs_view extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JenisKelamin = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -43,9 +49,9 @@ public class addMhs_view extends javax.swing.JFrame {
         btnResetDataDMhs = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbDataDMhs = new javax.swing.JTable();
-        tfSearchDataDMhs = new javax.swing.JTextField();
-        btnSearchDataDMhs = new javax.swing.JButton();
         cbJurusanDataDMhs = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jcTopikDataDMhs = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +67,10 @@ public class addMhs_view extends javax.swing.JFrame {
 
         jLabel5.setText("Jenis kelamin");
 
+        JenisKelamin.add(rbLakiDataDMhs);
         rbLakiDataDMhs.setText("Laki-laki");
 
+        JenisKelamin.add(rbPerempuanDataDMhs);
         rbPerempuanDataDMhs.setText("Perempuan");
 
         btnAddDataDMhs.setText("Add");
@@ -101,14 +109,6 @@ public class addMhs_view extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbDataDMhs);
 
-        tfSearchDataDMhs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfSearchDataDMhsActionPerformed(evt);
-            }
-        });
-
-        btnSearchDataDMhs.setText("Search");
-
         cbJurusanDataDMhs.setEditable(true);
         cbJurusanDataDMhs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "S1 Informatika", "S1 Teknologi Infromasi" }));
         cbJurusanDataDMhs.addActionListener(new java.awt.event.ActionListener() {
@@ -117,32 +117,25 @@ public class addMhs_view extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("Topik");
+
+        jcTopikDataDMhs.setEditable(true);
+        jcTopikDataDMhs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SIDE", "ICM", "TELE", "MCE" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(264, 264, 264))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(44, 44, 44)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfNamaDataDMhs)
-                                    .addComponent(tfNimDataDMhs)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(rbLakiDataDMhs)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(rbPerempuanDataDMhs)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(cbJurusanDataDMhs, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnAddDataDMhs)
                                 .addGap(18, 18, 18)
@@ -151,16 +144,26 @@ public class addMhs_view extends javax.swing.JFrame {
                                 .addComponent(btnRemoveDataDMhs)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnResetDataDMhs)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(43, 43, 43)
-                        .addComponent(tfSearchDataDMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSearchDataDMhs)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(44, 44, 44)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfNimDataDMhs)
+                                    .addComponent(cbJurusanDataDMhs, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(rbLakiDataDMhs)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(rbPerempuanDataDMhs))
+                                    .addComponent(jcTopikDataDMhs, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tfNamaDataDMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(235, 235, 235)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(264, 264, 264))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,20 +183,22 @@ public class addMhs_view extends javax.swing.JFrame {
                     .addComponent(cbJurusanDataDMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jcTopikDataDMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(rbLakiDataDMhs)
                     .addComponent(rbPerempuanDataDMhs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddDataDMhs)
                     .addComponent(btnEditDataDMhs)
                     .addComponent(btnRemoveDataDMhs)
-                    .addComponent(btnResetDataDMhs)
-                    .addComponent(tfSearchDataDMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSearchDataDMhs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(btnResetDataDMhs))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addGap(47, 47, 47))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -224,10 +229,6 @@ public class addMhs_view extends javax.swing.JFrame {
     private void btnResetDataDMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetDataDMhsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnResetDataDMhsActionPerformed
-
-    private void tfSearchDataDMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSearchDataDMhsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfSearchDataDMhsActionPerformed
 
     private void cbJurusanDataDMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbJurusanDataDMhsActionPerformed
         // TODO add your handling code here:
@@ -269,25 +270,72 @@ public class addMhs_view extends javax.swing.JFrame {
         });
     }
 
+    public ButtonGroup getJenisKelamin() {
+        return JenisKelamin;
+    }
+
+    public JButton getBtnAddDataDMhs() {
+        return btnAddDataDMhs;
+    }
+
+    public JButton getBtnEditDataDMhs() {
+        return btnEditDataDMhs;
+    }
+
+    public JButton getBtnRemoveDataDMhs() {
+        return btnRemoveDataDMhs;
+    }
+
+    public JButton getBtnResetDataDMhs() {
+        return btnResetDataDMhs;
+    }
+
+    public JComboBox<String> getCbJurusanDataDMhs() {
+        return cbJurusanDataDMhs;
+    }
+
+    public JComboBox<String> getJcTopikDataDMhs() {
+        return jcTopikDataDMhs;
+    }
+
+    public String getTfNamaDataDMhs() {
+        return tfNamaDataDMhs.getText();
+    }
+
+    public String getTfNimDataDMhs() {
+        return tfNimDataDMhs.getText();
+    }
+
+    public void setCbJurusanDataDMhs(JComboBox<String> cbJurusanDataDMhs) {
+        this.cbJurusanDataDMhs = cbJurusanDataDMhs;
+    }
+
+    public void setJcTopikDataDMhs(JComboBox<String> jcTopikDataDMhs) {
+        this.jcTopikDataDMhs = jcTopikDataDMhs;
+    }
+    
+    
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup JenisKelamin;
     private javax.swing.JButton btnAddDataDMhs;
     private javax.swing.JButton btnEditDataDMhs;
     private javax.swing.JButton btnRemoveDataDMhs;
     private javax.swing.JButton btnResetDataDMhs;
-    private javax.swing.JButton btnSearchDataDMhs;
     private javax.swing.JComboBox<String> cbJurusanDataDMhs;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> jcTopikDataDMhs;
     private javax.swing.JRadioButton rbLakiDataDMhs;
     private javax.swing.JRadioButton rbPerempuanDataDMhs;
     private javax.swing.JTable tbDataDMhs;
     private javax.swing.JTextField tfNamaDataDMhs;
     private javax.swing.JTextField tfNimDataDMhs;
-    private javax.swing.JTextField tfSearchDataDMhs;
     // End of variables declaration//GEN-END:variables
 }
