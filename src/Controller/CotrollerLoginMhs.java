@@ -5,16 +5,16 @@
  */
 package Controller;
 
-import View.Login_view;
+import View.LoginMhs_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import View.Login_view;
+import View.LoginMhs_view;
 /**
  *
  * @author ASUS
  */
 public class CotrollerLoginMhs implements ActionListener {
-    private Login_view view;
+    private LoginMhs_view view;
 //    private AdminEditProfile view2;
 //    private Koneksi kn;
 //    private String idAdmin;
@@ -22,7 +22,7 @@ public class CotrollerLoginMhs implements ActionListener {
     private String pass;
     
 public CotrollerLoginMhs(){
-    view = new Login_view();
+    view = new LoginMhs_view();
 //    view2 = new AdminEditProfile();
 //    view.addActionListener(this);
 //    view2.addActionListener(this);

@@ -14,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author ASUS
  */
-public class Login_view extends javax.swing.JFrame {
+public class LoginDosen_view extends javax.swing.JFrame {
 
     /**
      * Creates new form Login_view
      */
-    public Login_view() {
+    public LoginDosen_view() {
         initComponents();
     }
 
@@ -34,12 +34,12 @@ public class Login_view extends javax.swing.JFrame {
 
         jDialog1 = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
-        tfUname = new javax.swing.JTextField();
-        tfPass = new javax.swing.JTextField();
+        tfUnameDosen = new javax.swing.JTextField();
+        tfPassDosen = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
+        btnLoginDosen = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -54,15 +54,15 @@ public class Login_view extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tfUname.addActionListener(new java.awt.event.ActionListener() {
+        tfUnameDosen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfUnameActionPerformed(evt);
+                tfUnameDosenActionPerformed(evt);
             }
         });
 
-        tfPass.addActionListener(new java.awt.event.ActionListener() {
+        tfPassDosen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfPassActionPerformed(evt);
+                tfPassDosenActionPerformed(evt);
             }
         });
 
@@ -73,15 +73,19 @@ public class Login_view extends javax.swing.JFrame {
         jLabel2.setText("Password");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel3.setText("Login");
+        jLabel3.setText("Dosen");
 
-        btnLogin.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnLogin.setText("Login");
+        btnLoginDosen.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnLoginDosen.setText("Login");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(147, Short.MAX_VALUE)
+                .addComponent(btnLoginDosen)
+                .addGap(102, 102, 102))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,29 +95,25 @@ public class Login_view extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tfPass, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                        .addComponent(tfUname)))
-                .addContainerGap(40, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogin)
-                .addGap(102, 102, 102))
+                        .addComponent(tfPassDosen, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                        .addComponent(tfUnameDosen)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
                 .addComponent(jLabel3)
-                .addGap(38, 38, 38)
+                .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfUname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfUnameDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPassDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(btnLogin)
+                .addComponent(btnLoginDosen)
                 .addGap(30, 30, 30))
         );
 
@@ -136,13 +136,13 @@ public class Login_view extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPassActionPerformed
+    private void tfPassDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPassDosenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfPassActionPerformed
+    }//GEN-LAST:event_tfPassDosenActionPerformed
 
-    private void tfUnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUnameActionPerformed
+    private void tfUnameDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUnameDosenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfUnameActionPerformed
+    }//GEN-LAST:event_tfUnameDosenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,53 +161,56 @@ public class Login_view extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginDosen_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginDosen_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginDosen_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginDosen_view.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login_view().setVisible(true);
+                new LoginDosen_view().setVisible(true);
             }
         });
     }
 
-    public JButton getBtnLogin() {
-        return btnLogin;
+    public JButton getBtnLoginDosen() {
+        return btnLoginDosen;
     }
 
-    public String getTfPass() {
-        return tfPass.getText();
+    public String getTfPassDosen() {
+        return tfPassDosen.getText();
     }
 
-    public String getTfUname() {
-        return tfUname.getText();
+    public String getTfUnameDosen() {
+        return tfUnameDosen.getText();
     }
 
-    public void setTfUname(JTextField tfUname) {
-        this.tfUname = tfUname;
+    public void setTfUnameDosen(JTextField tfUnameDosen) {
+        this.tfUnameDosen = tfUnameDosen;
     }
         public void setLoginEvent(ActionListener act){
-        btnLogin.addActionListener(act);
+        btnLoginDosen.addActionListener(act);
     }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLoginDosen;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tfPass;
-    private javax.swing.JTextField tfUname;
+    private javax.swing.JTextField tfPassDosen;
+    private javax.swing.JTextField tfUnameDosen;
     // End of variables declaration//GEN-END:variables
 
     public void showMessage(String message, String title, int type){

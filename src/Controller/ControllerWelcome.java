@@ -5,13 +5,14 @@
  */
 package Controller;
 
-import View.Login_view;
+import View.LoginDosen_view;
+import View.LoginMhs_view;
 import View.Welcome_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import javax.swing.JComboBox;
-import View.Login_view;
+import View.LoginMhs_view;
 
 /**
  *
@@ -20,7 +21,8 @@ import View.Login_view;
 public class ControllerWelcome implements ActionListener  {
     private Welcome_view view;
 //    private NewJFrame v;
-    private Login_view viewLogin;
+    private LoginMhs_view viewLogin;
+    private LoginDosen_view loginDosen;
     private JComboBox<String> daftar;
 
     public ControllerWelcome() {
@@ -28,9 +30,11 @@ public class ControllerWelcome implements ActionListener  {
         view = new Welcome_view();
 
 view.addActionListener(this);
-        viewLogin = new Login_view();
+        viewLogin = new LoginMhs_view();
         view.setVisible(true);
 //        v.setVisible(true);
+        loginDosen = new LoginDosen_view();
+        view.setVisible(true);
     }
 
     @Override
@@ -47,10 +51,9 @@ view.addActionListener(this);
         if(view.getCbDaftar().getSelectedItem() == "Mahasiswa"){
             System.out.println("INI MAHASSISWA");
             viewLogin.setVisible(true);
-        }else  if(view.getCbDaftar().getSelectedItem() == "Dosen"){
+        }else if (view.getCbDaftar().getSelectedItem() == "Dosen"){
             System.out.println("DOESN BOI");
-        }else{
-            System.out.println("ELSE BOI");
+            loginDosen.setVisible(true);
         }
     }
     

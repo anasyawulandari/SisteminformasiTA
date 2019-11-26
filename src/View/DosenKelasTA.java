@@ -5,6 +5,14 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author user
@@ -42,7 +50,7 @@ public class DosenKelasTA extends javax.swing.JFrame {
         tfSearchDaftarKelasTA = new javax.swing.JTextField();
         btnSearchDaftarKelasTA = new javax.swing.JButton();
         cbDaftarKK = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcDaftarDosenKelasTA = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,8 +116,8 @@ public class DosenKelasTA extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setEditable(true);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SPT", "ANI", "MYA", "ANAS" }));
+        jcDaftarDosenKelasTA.setEditable(true);
+        jcDaftarDosenKelasTA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SPT", "ANI", "MYA", "ANAS" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -130,7 +138,7 @@ public class DosenKelasTA extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tfDaftarNamaKelasTA)
                                     .addComponent(cbDaftarKK, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jcDaftarDosenKelasTA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnAddDaftarKelasTA)
                                 .addGap(18, 18, 18)
@@ -161,7 +169,7 @@ public class DosenKelasTA extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlDaftarDosenTA)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcDaftarDosenKelasTA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jfDaftarKK)
@@ -216,6 +224,111 @@ public class DosenKelasTA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbDaftarKKActionPerformed
 
+    public String getTfDaftarNamaKelasTA() {
+        return tfDaftarNamaKelasTA.getText();
+    }
+
+    public void setTfDaftarNamaKelasTA(JTextField tfDaftarNamaKelasTA) {
+        this.tfDaftarNamaKelasTA = tfDaftarNamaKelasTA;
+    }
+
+    public JButton getBtnAddDaftarKelasTA() {
+        return btnAddDaftarKelasTA;
+    }
+
+    public void setBtnAddDaftarKelasTA(JButton btnAddDaftarKelasTA) {
+        this.btnAddDaftarKelasTA = btnAddDaftarKelasTA;
+    }
+
+    public JButton getBtnEditDaftarKelasTA() {
+        return btnEditDaftarKelasTA;
+    }
+
+    public void setBtnEditDaftarKelasTA(JButton btnEditDaftarKelasTA) {
+        this.btnEditDaftarKelasTA = btnEditDaftarKelasTA;
+    }
+
+    public JButton getBtnRemoveDaftarKelasTA() {
+        return btnRemoveDaftarKelasTA;
+    }
+
+    public void setBtnRemoveDaftarKelasTA(JButton btnRemoveDaftarKelasTA) {
+        this.btnRemoveDaftarKelasTA = btnRemoveDaftarKelasTA;
+    }
+
+    public JButton getBtnResetDaftarKelasTA() {
+        return btnResetDaftarKelasTA;
+    }
+
+    public void setBtnResetDaftarKelasTA(JButton btnResetDaftarKelasTA) {
+        this.btnResetDaftarKelasTA = btnResetDaftarKelasTA;
+    }
+
+    public JButton getBtnSearchDaftarKelasTA() {
+        return btnSearchDaftarKelasTA;
+    }
+
+    public void setBtnSearchDaftarKelasTA(JButton btnSearchDaftarKelasTA) {
+        this.btnSearchDaftarKelasTA = btnSearchDaftarKelasTA;
+    }
+
+    public JComboBox<String> getCbDaftarKK() {
+        return cbDaftarKK;
+    }
+
+    public void setCbDaftarKK(JComboBox<String> cbDaftarKK) {
+        this.cbDaftarKK = cbDaftarKK;
+    }
+
+    public JComboBox<String> getJcDaftarDosenKelasTA() {
+        return jcDaftarDosenKelasTA;
+    }
+
+    public void setJcDaftarDosenKelasTA(JComboBox<String> jcDaftarDosenKelasTA) {
+        this.jcDaftarDosenKelasTA = jcDaftarDosenKelasTA;
+    }
+
+    public JLabel getJfDaftarKK() {
+        return jfDaftarKK;
+    }
+
+    public void setJfDaftarKK(JLabel jfDaftarKK) {
+        this.jfDaftarKK = jfDaftarKK;
+    }
+
+    public JLabel getJlDaftarDosenTA() {
+        return jlDaftarDosenTA;
+    }
+
+    public void setJlDaftarDosenTA(JLabel jlDaftarDosenTA) {
+        this.jlDaftarDosenTA = jlDaftarDosenTA;
+    }
+
+    public JLabel getJlDaftarNamaKelasTA() {
+        return jlDaftarNamaKelasTA;
+    }
+
+    public void setJlDaftarNamaKelasTA(JLabel jlDaftarNamaKelasTA) {
+        this.jlDaftarNamaKelasTA = jlDaftarNamaKelasTA;
+    }
+
+    public JTable getTbDaftarKelasTA() {
+        return tbDaftarKelasTA;
+    }
+
+    public void setTbDaftarKelasTA(JTable tbDaftarKelasTA) {
+        this.tbDaftarKelasTA = tbDaftarKelasTA;
+    }
+
+    public JTextField getTfSearchDaftarKelasTA() {
+        return tfSearchDaftarKelasTA;
+    }
+
+    public void setTfSearchDaftarKelasTA(JTextField tfSearchDaftarKelasTA) {
+        this.tfSearchDaftarKelasTA = tfSearchDaftarKelasTA;
+    }
+
+    
     /**
      * @param args the command line arguments
      */
@@ -259,10 +372,10 @@ public class DosenKelasTA extends javax.swing.JFrame {
     private javax.swing.JButton btnResetDaftarKelasTA;
     private javax.swing.JButton btnSearchDaftarKelasTA;
     private javax.swing.JComboBox<String> cbDaftarKK;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> jcDaftarDosenKelasTA;
     private javax.swing.JLabel jfDaftarKK;
     private javax.swing.JLabel jlDaftarDosenTA;
     private javax.swing.JLabel jlDaftarNamaKelasTA;
