@@ -24,12 +24,13 @@ public class ControllerWelcome implements ActionListener  {
     private LoginMhs_view viewLogin;
     private LoginDosen_view loginDosen;
     private JComboBox<String> daftar;
+    private Database db;
 
     public ControllerWelcome() {
 //        v = new NewJFrame();
         view = new Welcome_view();
-
-view.addActionListener(this);
+        db = new Database();
+        view.addActionListener(this);
         viewLogin = new LoginMhs_view();
         view.setVisible(true);
 //        v.setVisible(true);

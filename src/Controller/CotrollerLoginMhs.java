@@ -5,16 +5,22 @@
  */
 package Controller;
 
+import Model.Mahasiswa;
 import View.LoginMhs_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import View.LoginMhs_view;
+import java.awt.event.MouseAdapter;
+import java.util.*;
 /**
  *
  * @author ASUS
  */
-public class CotrollerLoginMhs implements ActionListener {
-    private LoginMhs_view view;
+public class CotrollerLoginMhs extends MouseAdapter  implements ActionListener {
+//    private LoginMhs_view view;
+    private LoginMhs_view gui = new View.LoginMhs_view();
+    private Mahasiswa mahasiswa = new Mahasiswa("","","","",' ');
+    List<Mahasiswa> find = new ArrayList();
 //    private AdminEditProfile view2;
 //    private Koneksi kn;
 //    private String idAdmin;
@@ -22,7 +28,9 @@ public class CotrollerLoginMhs implements ActionListener {
     private String pass;
     
 public CotrollerLoginMhs(){
-    view = new LoginMhs_view();
+    gui.addActionListener(this);
+    gui.setVisible(true);
+//    view = new LoginMhs_view();
 //    view2 = new AdminEditProfile();
 //    view.addActionListener(this);
 //    view2.addActionListener(this);
@@ -32,18 +40,20 @@ public CotrollerLoginMhs(){
     @Override
     public void actionPerformed(ActionEvent e) {
          Object source = e.getSource();
-        if (source.equals(view.getBtnLogin())){
+        if (source.equals(gui.getBtnLogin())){
             btnLoginActionPerformed();
         }
     
     }
     public void btnLoginActionPerformed(){
-        user = view.getTfUname();
-        pass = view.getTfPass();
+        user = gui.getTfUname();
+        pass = gui.getTfPass();
         String nama;
         if(user.isEmpty() || pass.isEmpty()){
-            view.showMessage("Masukkan Username dan Password", "Error", 0);
+            gui.showMessage("Masukkan Username dan Password", "Error", 0);
         }else{
+            new AddMhs_C();
+            gui.setVisible(false);
 //            if(kn.cekUserLogin(user, pass)){
 //                nama = kn.cariNama(user);
 //                idAdmin = kn.cariIdAdmin(user);
