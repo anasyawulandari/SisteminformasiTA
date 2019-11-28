@@ -6,6 +6,7 @@
 package Controller;
 
 
+import View.ApprovalDosenKelasTA;
 import View.PilihanDosen_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,28 +20,32 @@ public class PilihanDosen_C implements ActionListener{
 
     public PilihanDosen_C() {
         view = new PilihanDosen_view();
+        view.setBtnApprovalDosenKelasTA(this);
+        view.setBtnDosenPilihKelasTA(this);
         view.setVisible(true);
     } 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        Object source = e.getSource();
-//        if (source.equals(view.getBtnApprovalDosenKelasTA())) {
-             btnDosenPilihKelasTAActionPerformed();
-//            System.out.println("INI DIKLIK");
-//        } else {
-//            btnApprovalDosenKelasTAActionPerformed();
-//        }
+        Object source = e.getSource();
+        if (source.equals(view.getBtnDosenPilihKelasTA())) {
+            btnDosenPilihKelasTAActionPerformed();
+            System.out.println("INI DIKLIK");
+        } else{
+            btnApprovalDosenKelasTAActionPerformed();
+            System.out.println("asyikk masuk");
+        }
+    
     }
     
     public void btnDosenPilihKelasTAActionPerformed(){
-//            Dosen_C pageDosen = new Dosen_C();
-              new Dosen_C();
-//            pageDosen.show;
-        
+         new Dosen_C(); 
     }
+    
     public void btnApprovalDosenKelasTAActionPerformed(){
-        
+         new Approval_C();   
     }
+
+    
     
 }
