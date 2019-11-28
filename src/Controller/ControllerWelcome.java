@@ -18,44 +18,44 @@ import View.LoginMhs_view;
  *
  * @author ASUS
  */
-public class ControllerWelcome implements ActionListener  {
+public class ControllerWelcome implements ActionListener {
+
     private Welcome_view view;
 //    private NewJFrame v;
     private LoginMhs_view viewLogin;
     private LoginDosen_view loginDosen;
     private JComboBox<String> daftar;
-    private Database db;
 
     public ControllerWelcome() {
 //        v = new NewJFrame();
         view = new Welcome_view();
-        db = new Database();
+
         view.addActionListener(this);
-        viewLogin = new LoginMhs_view();
-        view.setVisible(true);
-//        v.setVisible(true);
-        loginDosen = new LoginDosen_view();
         view.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        if (source.equals(view.getBtnMulai())){
+        if (source.equals(view.getBtnMulai())) {
             btnMulaiActionPerformed();
-            System.out.println("INI DIKLIK");
-    }else{
-            
+//            System.out.println("INI DIKLIK");
+        } else {
+
         }
     }
+
     private void btnMulaiActionPerformed() {
-        if(view.getCbDaftar().getSelectedItem() == "Mahasiswa"){
-            System.out.println("INI MAHASSISWA");
-            viewLogin.setVisible(true);
-        }else if (view.getCbDaftar().getSelectedItem() == "Dosen"){
+        if (view.getCbDaftar().getSelectedItem() == "Mahasiswa") {
+            new CotrollerLoginMhs();
+            view.dispose();
+//            viewLogin.setVisible(true);
+        } else if (view.getCbDaftar().getSelectedItem() == "Dosen") {
             System.out.println("DOESN BOI");
-            loginDosen.setVisible(true);
+            new ControllerLoginDsn();
+//            loginDosen.setVisible(true);
+            view.dispose();
         }
     }
-    
+
 }

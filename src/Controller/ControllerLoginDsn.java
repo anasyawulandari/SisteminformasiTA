@@ -12,30 +12,34 @@ import java.awt.event.ActionListener;
  *
  * @author user
  */
-public class ControllerLoginDsn implements ActionListener{
-     private LoginDosen_view view;
-     
-     private String userDosen;
-     private String passDosen;
+public class ControllerLoginDsn implements ActionListener {
+
+    private LoginDosen_view view;
+
+    private String userDosen;
+    private String passDosen;
 
     public ControllerLoginDsn() {
         view = new LoginDosen_view();
+        view.setVisible(true);
+        view.setLoginEvent(this);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        if (source.equals(view.getBtnLoginDosen())){
+        if (source.equals(view.getBtnLoginDosen())) {
             btnLoginDosenActionPerformed();
         }
     }
-      public void btnLoginDosenActionPerformed(){
+
+    public void btnLoginDosenActionPerformed() {
         userDosen = view.getTfUnameDosen();
         passDosen = view.getTfPassDosen();
         String nama;
-        if(userDosen.isEmpty() || passDosen.isEmpty()){
+        if (userDosen.isEmpty() || passDosen.isEmpty()) {
             view.showMessage("Masukkan Username dan Password", "Error", 0);
-        }else{
+        } else {
 //            if(kn.cekUserLogin(user, pass)){
 //                nama = kn.cariNama(user);
 //                idAdmin = kn.cariIdAdmin(user);
@@ -46,9 +50,12 @@ public class ControllerLoginDsn implements ActionListener{
 //            } else {
 //                view.showMessage("Username Atau Password Salah", "Login Failed", 2);
 //            }
-                
+
+            if (true) {
+                new Dosen_C();
+            }
+
         }
     }
-     
-     
+
 }

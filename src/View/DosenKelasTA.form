@@ -79,17 +79,14 @@
                                   <EmptySpace min="0" pref="53" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="tfSearchDaftarKelasTA" min="-2" pref="138" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnSearchDaftarKelasTA" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlDaftarKelasTA" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -97,7 +94,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlDaftarKelasTA" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlDaftarNamaKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -119,8 +116,6 @@
                       <Component id="btnEditDaftarKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRemoveDaftarKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnResetDaftarKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfSearchDaftarKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSearchDaftarKelasTA" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="185" max="-2" attributes="0"/>
@@ -130,7 +125,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jlDaftarKelasTA">
           <Properties>
             <Property name="text" type="java.lang.String" value="Daftar Kelas TA"/>
           </Properties>
@@ -201,16 +196,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="tfSearchDaftarKelasTA">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSearchDaftarKelasTAActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnSearchDaftarKelasTA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Search"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JComboBox" name="cbDaftarKK">
           <Properties>
             <Property name="editable" type="boolean" value="true"/>

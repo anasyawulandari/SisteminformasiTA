@@ -5,19 +5,19 @@
  */
 package Controller;
 
-import View.addMhs_view;
+import View.DosenKelasTA;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  *
- * @author ASUS
+ * @author user
  */
-public class Mahasiswa_C implements ActionListener{
-        private addMhs_view view;
+public class Dosen_C implements ActionListener{
+    private DosenKelasTA view;
 
-    public Mahasiswa_C() {
-        view = new addMhs_view();
+    public Dosen_C() {
+        view = new DosenKelasTA();
         view.setVisible(true);
     } 
 
@@ -26,5 +26,4 @@ public class Mahasiswa_C implements ActionListener{
         Object source = e.getSource();
 
     }
-    
 }
