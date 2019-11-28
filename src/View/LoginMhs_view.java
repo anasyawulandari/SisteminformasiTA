@@ -198,6 +198,10 @@ public class LoginMhs_view extends javax.swing.JFrame {
     public void setLoginEvent(ActionListener act) {
         btnLogin.addActionListener(act);
     }
+    public void addActionListener(ActionListener x){
+        btnLogin.addActionListener(x);
+    }
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

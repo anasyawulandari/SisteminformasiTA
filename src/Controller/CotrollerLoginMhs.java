@@ -7,6 +7,8 @@ package Controller;
 
 import Model.Mahasiswa;
 import View.LoginMhs_view;
+import Model.Database;
+import View.addMhs_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -16,20 +18,22 @@ import java.util.*;
  * @author ASUS
  */
 public class CotrollerLoginMhs implements ActionListener {
-
     private LoginMhs_view view;
+    private Database db;
+    
 //    private AdminEditProfile view2;
 //    private Koneksi kn;
 //    private String idAdmin;
     private String user;
     private String pass;
+//    private String idmhs;
 
     public CotrollerLoginMhs() {
         view = new LoginMhs_view();
+        db = new Database();
 //    view2 = new AdminEditProfile();
-//    view.addActionListener(this);
-//    view2.addActionListener(this);
-        view.setLoginEvent(this);
+        view.addActionListener(this);
+//        view.setLoginEvent(this);
         view.setVisible(true);
     }
 
@@ -50,19 +54,14 @@ public class CotrollerLoginMhs implements ActionListener {
         if (user.isEmpty() || pass.isEmpty()) {
             view.showMessage("Masukkan Username dan Password", "Error", 0);
         } else {
-//            if(kn.cekUserLogin(user, pass)){
-//                nama = kn.cariNama(user);
-//                idAdmin = kn.cariIdAdmin(user);
-//                System.out.println(idAdmin);
-//                view.showMessage("Selamat Datang " + nama, "Login Succeded", 1);
-//                new AdminHome();
-//                view.setVisible(false);
-//            } else {
-//                view.showMessage("Username Atau Password Salah", "Login Failed", 2);
-//            }
-            System.out.println("MASUK KE LOGIN BOI");
-            if (true) {
-                new Mahasiswa_C();
+            if(db.cekUserLogin(user, pass)){
+                nama = db.cariNama(user);
+                view.showMessage("Selamat Datang " + nama, "Login Succeded", 1);
+//                new addMhs_view();
+                  new Mahasiswa_C();
+                view.setVisible(false);
+            } else {
+                view.showMessage("Username Atau Password Salah", "Login Failed", 2);
             }
 
         }

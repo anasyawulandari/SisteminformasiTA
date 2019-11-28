@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 
 //import Model.Mahasiswa;
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
-//import java.util.ArrayList;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import Controller.*;
 import Model.*;
 import java.sql.*;
 import java.util.*;
@@ -30,7 +31,8 @@ public class Database {
     private ArrayList<Mahasiswa> mahasiswa = new ArrayList<>();
 
     public Database() {
-        connect();
+//        connect();
+        loadMahasiswa();
     } 
     
     public void connect(){
@@ -140,4 +142,23 @@ public class Database {
         disconnect();
     }
     
+     public boolean cekUserLogin(String u, String p){
+        boolean cek = false;
+        for (Mahasiswa m : mahasiswa) {
+            if (m.getNama().equals(u) && m.getPass().equals(p)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+       public String cariNama(String u){
+        String nama = null;
+        for(Mahasiswa m : mahasiswa){
+            if (m.getNama().equals(u)) {
+                nama = m.getNama();
+            }
+        } return nama;
+    }
+
 }
