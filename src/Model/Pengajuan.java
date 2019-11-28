@@ -5,10 +5,19 @@
  */
 package Model;
 
+import java.util.*;
+
 /**
  *
  * @author ASUS
  */
 public class Pengajuan {
+     private List<Mahasiswa> daftarTA;
     
+    public Mahasiswa lihatTA(int i){
+        return daftarTA.get(i);
+    }
+    public void ACC(Mahasiswa a){
+        a.getTA().setAcc(true);        
+    }
 }

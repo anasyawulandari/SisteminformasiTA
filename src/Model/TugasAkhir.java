@@ -14,16 +14,35 @@ import java.util.List;
 public class TugasAkhir {
 
     private List<Dosen> pembimbing;
-    
     private String kk;
+    private String judulTA;
+    private boolean dilihat=false;
+    private boolean acc=false;
+
 //    private int jumDosen = 0; 
 //    private Dosen dosenPembimbing;
-    private String judulTA;
+
 
     public TugasAkhir(String kk, String judulTA) {
         this.kk = kk;
         this.judulTA = judulTA;
     }
+    public boolean isDilihat() {
+        return dilihat;
+    }
+
+    public void setDilihat(boolean dilihat) {
+        this.dilihat = dilihat;
+    }
+
+    public boolean isAcc() {
+        return acc;
+    }
+
+    public void setAcc(boolean acc) {
+        this.acc = acc;
+    }
+    
 
 //    akan menambahkan pembimbing berdasarkan object Dosen dalam parameter
 //    i berperan sebagai index, apakah dosen pembimbing 1 atau 2

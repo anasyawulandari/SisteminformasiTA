@@ -58,6 +58,11 @@ public class Mahasiswa extends Orang{
     public void createTA(String kk, String judulTA){
         this.tugasAkhir = new TugasAkhir(kk,judulTA);
     }
+
+    public TugasAkhir getTA(){
+        return tugasAkhir;
+    }
+    
     
 //    public List<Mahasiswa> getAllMahasiswa() throws SQLException
 //    {
