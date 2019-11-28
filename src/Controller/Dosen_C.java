@@ -5,6 +5,7 @@
  */
 package Controller;
 
+
 import View.DosenKelasTA;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,5 +26,9 @@ public class Dosen_C implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
 
+    }
+
+    void view() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

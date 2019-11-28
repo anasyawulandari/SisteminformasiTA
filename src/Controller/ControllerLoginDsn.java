@@ -5,7 +5,8 @@
  */
 package Controller;
 
-import View.LoginDosen_view;
+import View.LoginDosen_v;
+import View.PilihanDosen_view;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
@@ -14,13 +15,13 @@ import java.awt.event.ActionListener;
  */
 public class ControllerLoginDsn implements ActionListener {
 
-    private LoginDosen_view view;
-
+    private LoginDosen_v view;
+//    private PilihanDosen_view viewPilihan;
     private String userDosen;
     private String passDosen;
 
     public ControllerLoginDsn() {
-        view = new LoginDosen_view();
+        view = new LoginDosen_v();
         view.setVisible(true);
         view.setLoginEvent(this);
     }
@@ -50,12 +51,13 @@ public class ControllerLoginDsn implements ActionListener {
 //            } else {
 //                view.showMessage("Username Atau Password Salah", "Login Failed", 2);
 //            }
-
+        
             if (true) {
-                new Dosen_C();
+                new PilihanDosen_C();
             }
-
         }
+        
     }
+    
 
 }

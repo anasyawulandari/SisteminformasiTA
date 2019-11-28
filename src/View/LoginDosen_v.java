@@ -14,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author ASUS
  */
-public class LoginDosen_view extends javax.swing.JFrame {
+public class LoginDosen_v extends javax.swing.JFrame {
 
     /**
      * Creates new form Login_view
      */
-    public LoginDosen_view() {
+    public LoginDosen_v() {
         initComponents();
     }
 

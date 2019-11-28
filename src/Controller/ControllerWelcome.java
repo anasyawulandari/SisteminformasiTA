@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import View.LoginDosen_view;
+import View.LoginDosen_v;
 import View.LoginMhs_view;
 import View.Welcome_view;
 import java.awt.event.ActionEvent;
@@ -23,7 +23,7 @@ public class ControllerWelcome implements ActionListener {
     private Welcome_view view;
 //    private NewJFrame v;
     private LoginMhs_view viewLogin;
-    private LoginDosen_view loginDosen;
+//    private LoginDosen_v loginDosen;
     private JComboBox<String> daftar;
 
     public ControllerWelcome() {
