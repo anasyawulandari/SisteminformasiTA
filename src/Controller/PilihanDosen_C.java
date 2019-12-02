@@ -17,7 +17,6 @@ import java.awt.event.ActionListener;
  */
 public class PilihanDosen_C implements ActionListener{
     private PilihanDosen_view view;
-
     public PilihanDosen_C() {
         view = new PilihanDosen_view();
         view.setBtnApprovalDosenKelasTA(this);

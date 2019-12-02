@@ -156,12 +156,11 @@ public class LoginDosen_v extends javax.swing.JFrame {
         return tfUnameDosen.getText();
     }
 
-    public void setTfUnameDosen(JTextField tfUnameDosen) {
-        this.tfUnameDosen = tfUnameDosen;
-    }
+    
     public void setLoginEvent(ActionListener act) {
         btnLoginDosen.addActionListener(act);
     }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

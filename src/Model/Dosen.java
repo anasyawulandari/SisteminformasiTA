@@ -10,24 +10,27 @@ package Model;
  * @author ASUS
  */
 public class Dosen extends Orang{
-    private long nidn;
+    private String nidn;
     private String kodedosen;
     KelasTugasAkhir kelasTA;
     private String topik;
+    private String passDosen;
 
-    public Dosen(long nidn, String kodedosen, KelasTugasAkhir kelasTA, String topik, String nama) {
+    public Dosen(String nidn, String kodedosen, String nama, String pass, String topik) {
         super(nama);
         this.nidn = nidn;
+        this.passDosen = pass;
         this.kodedosen = kodedosen;
-        this.kelasTA = kelasTA;
+     //   this.kelasTA = kelasTA;
         this.topik = topik;
-    }
 
-    public long getNidn() {
+    }
+    
+    public String getNidn() {
         return nidn;
     }
 
-    public void setNidn(long nidn) {
+    public void setNidn(String nidn) {
         this.nidn = nidn;
     }
 
@@ -46,8 +49,10 @@ public class Dosen extends Orang{
     public void setTopik(String topik) {
         this.topik = topik;
     }
-    
-  
+
+    public String getPassDosen() {
+        return passDosen;
+    }
    
     public void createKelompokTA(String topik){
         

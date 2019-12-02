@@ -29,10 +29,11 @@ public class Database {
     private Statement stmt = null;
     private ResultSet rs = null;
     private ArrayList<Mahasiswa> mahasiswa = new ArrayList<>();
-
+    private ArrayList<Dosen> dosen = new ArrayList<>();
     public Database() {
 //        connect();
         loadMahasiswa();
+        loadDosen();
     } 
     
     public void connect(){
@@ -66,7 +67,7 @@ public class Database {
         }
         return cek;
     }
-    
+// MAHASISWA //    
     public void loadMahasiswa() {
         connect();
         try {
@@ -80,7 +81,7 @@ public class Database {
         }
         disconnect();
     }
-
+    
     public ArrayList<Mahasiswa> getMahasiswa() {
         return mahasiswa;
     }
@@ -152,7 +153,7 @@ public class Database {
         }
         return cek;
     }
-       public String cariNama(String u){
+    public String cariNama(String u){
         String nama = null;
         for(Mahasiswa m : mahasiswa){
             if (m.getNama().equals(u)) {
@@ -160,5 +161,73 @@ public class Database {
             }
         } return nama;
     }
+ 
+ // DOSEN //   
+    
+     public void loadDosen() {
+        connect();
+        try {
+            String query = "SELECT * FROM dosen";
+            rs = stmt.executeQuery(query);
+            while (rs.next()){
+                dosen.add(new Dosen(rs.getString("nidn"), rs.getString("kodedosen"), rs.getString("nama"), rs.getString("pass"), rs.getString("topik")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        disconnect();
+    }
+     
+    public ArrayList<Dosen> getDosen() {
+        return dosen;
+    }
+    
+    public void addDosen(Dosen d) {
+        connect();
+        String query = "INSERT INTO dosen VALUES (";
+        query += "'" + d.getNama() + "',";
+        query += "'" + d.getNidn() + "',";
+        query += "'" + d.getPassDosen()+ "',";
+        query += "'" + d.getTopik()+ "'";
+        query += "'" + d.getKodedosen()+ "'";
+        query += ")";
+        if (manipulate(query)) dosen.add(d);
+        disconnect();
+    }
+    
+//    public void delDosen(String nidn) {
+//        connect();
+//        String query = "DELETE FROM dosen WHERE nim='" + nim + "'";
+//        if (manipulate(query)){
+//            for (Mahasiswa mhs : mahasiswa) {
+//                if (mhs.getNim().equals(nim)){
+//                    mahasiswa.remove(mhs);
+//                    break;
+//                }
+//            }
+//        }
+//        disconnect();
+//    }
+      
+    public String cariNamaDosen(String u){
+        String nama = null;
+        for(Dosen d : dosen){
+            if (d.getNama().equals(u)) {
+                nama = d.getNama();
+            }
+        } return nama;
+    }
+    public boolean cekUserDosenLogin(String u, String p){
+        boolean cek = false;
+        System.out.println("MASUK");
+        for (Dosen d : dosen) {
+            if (d.getNama().equals(u) && d.getPassDosen().equals(p)){
+                cek = true;
+                break;
+            }
+        }
+        return cek;
+    }
+       
 
 }
